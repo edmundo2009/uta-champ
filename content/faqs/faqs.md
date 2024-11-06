@@ -1,5 +1,8 @@
 ---
 faqs:
+  - question: 新しい question
+    answer: answer
+    category: エントリー
   - question: 大会はニックネームのみで出場できますか？
     answer: sss申し訳ありません。当大会は本名でのご参加をお願いしております。ニックネームの併記は可能ですのでお申し込みの際にお知らせください。
     category: エントリー
