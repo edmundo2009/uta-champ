@@ -23,7 +23,7 @@
     "react-dom": "18.2.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
-    "tinacms": "^1.6.7"
+    "tinacms": "^2.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.17.6",
