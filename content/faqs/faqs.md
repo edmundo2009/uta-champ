@@ -1,6 +1,6 @@
 ---
 faqs:
-  - question: 新しい question
+  - question: 新しい question 2
     answer: answer
     category: エントリー
   - question: 大会はニックネームのみで出場できますか？
