@@ -84,8 +84,8 @@ const schema = defineSchema({
 export default defineConfig({
   schema,
   branch: process.env.NEXT_PUBLIC_TINA_BRANCH || "master",
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
-  token: process.env.TINA_TOKEN || "",
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "01248537-bed9-4526-8eb2-e7b38f3ad462",
+  token: process.env.TINA_TOKEN || "f2dd49bd4cd2dc70eb0ef12feadc783dc472df72",
   build: {
     publicFolder: "public",
     outputFolder: "admin"
