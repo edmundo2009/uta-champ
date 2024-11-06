@@ -82,7 +82,9 @@ const FAQ: React.FC<FAQProps> = ({ faqData }) => {
       <div className="space-y-8">
         {filteredFAQs.map((category, categoryIndex) => (
           <div key={categoryIndex} className="space-y-4">
-            <h2 className="text-2xl font-semibold mb-4">{category.category}</h2>
+            <h2 className="text-2xl font-semibold mb-4
+            font-zen-antique
+            ">{category.category}</h2>
             <div className="space-y-4">
               {category.items.map((item, itemIndex) => (
                 <Card key={itemIndex} className="hover:shadow-md transition-shadow">

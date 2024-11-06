@@ -47,15 +47,49 @@
   }
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
 
-.section-title {
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.gradient-text {
+  text-align: center;
+  font-size: 2.25rem;
+  /* text-4xl */
+  animation: gradient 6s linear infinite;
+  background-image: linear-gradient(to right,
+      theme('colors.gray.900'),
+      theme('colors.indigo.400'),
+      theme('colors.gray.900'),
+      theme('colors.indigo.600'),
+      theme('colors.gray.900'));
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* font-family: 'Zen Antique' */
+}
+
+@media (min-width: 768px) {
+  .gradient-text {
+    font-size: 3rem;
+    /* md:text-5xl */
+  }
+}
+
+
+.section-title2 {
   animation: gradient 6s linear infinite;
   background-image: linear-gradient(to right, #6B7280, #6366F1, #4B5563, #5B61B9, #6B7280);
   background-size: 200% auto;
   background-clip: text;
   padding-bottom: 8px;
   /* font-family: "Zen_Antique"; */
-  /* font-family: "Nacelle"; */
   font-weight: 800;
   color: transparent;
   text-align: center;

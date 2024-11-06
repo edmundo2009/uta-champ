@@ -14,22 +14,12 @@ export default function FestivalInfo() {
       from-blue-100
       to-white-100
       ">
-      
       {/* Section Title: app\scrollAnimJS.tsx with tailwind keyframes and animation class */}
       <div className="opacity-0 translate-y-10 transition-all duration-700 ease-out">
       {/* 10 units down / applies transition effects to all changing properties. / slow-to-fast transition */}
         <div className="pb-6">
-        <h2 className="
-            text-center 
-            text-4xl 
-            md:text-5xl
-            pb-5 
-            animate-[gradient_6s_linear_infinite] 
-            bg-[linear-gradient(to_right,theme(colors.gray.900),theme(colors.indigo.400),theme(colors.gray.900),theme(colors.indigo.600),theme(colors.gray.900))] 
-            bg-[length:200%_auto] 
-            bg-clip-text text-transparent
-            font-zen-antique
-        ">
+
+        <h2 className="gradient-text font-zen-antique">
           大会情報
         </h2>
         </div>

@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Facebook, Twitter, Youtube } from 'lucide-react'
 import { SiLine } from '@icons-pack/react-simple-icons'
-import { GlobalVisibilityContext, PulsatingEffect } from './unused/pulsating-cta'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -33,11 +32,10 @@ export default function Navbar() {
           <div className="flex items-center space-x-4">
             {/* Sign In Button */}
             {/* <PulsatingEffect isVisible={globalVisibility?.isVisible || false}> */}
-              <Button id="cta-button" variant="outline" className="text-black border-white hover:bg-gray-100 hover:text-gray-900">
-                お問い合わせ
+            <Button asChild variant="outline" className="text-black border-white hover:bg-gray-100 hover:text-gray-900">
+              <a href="#inquiry">お問い合わせ</a>
               </Button>
-            {/* </PulsatingEffect> */}
-
+            
             {/* Social Media Icons */}
             <div className="flex items-center space-x-2">
               <Link href="#" className="text-white hover:text-green-400 transition-colors">
