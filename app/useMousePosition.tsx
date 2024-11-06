@@ -1,6 +1,5 @@
 // useMousePosition.tsx
 "use client";
-// Importing necessary hooks and components
 import { useState, useEffect, useRef } from 'react';
 
 const useMousePosition = () => {
@@ -27,7 +26,14 @@ const useMousePosition = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
-  return { mousePosition, containerRef };
+  const getTransform = (factor: number) => {
+    if (typeof window !== 'undefined') {
+      return `translate(${(mousePosition.x - window.innerWidth / 2) * factor}px, ${(mousePosition.y - window.innerHeight / 2) * factor}px)`
+    }
+    return 'translate(0, 0)'
+  }
+
+  return { getTransform, mousePosition, containerRef };
 };
 
 export default useMousePosition;

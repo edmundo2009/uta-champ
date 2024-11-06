@@ -9,16 +9,11 @@ import { Calendar, MapPin } from 'lucide-react'
 export default function FestivalInfo() {
   useScrollAnimation();
   return (
-    <section className="
-      pt-12 
-      bg-gradient-to-b from-blue-100
+    <section className="pt-12 
+      bg-gradient-to-b 
+      from-blue-100
       to-white-100
-      "
-      /* via-indigo-200 */ 
-      // data-aos="fade-up"
-    >
-
-
+      ">
       
       {/* Section Title: app\scrollAnimJS.tsx with tailwind keyframes and animation class */}
       <div className="opacity-0 translate-y-10 transition-all duration-700 ease-out">

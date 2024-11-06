@@ -9,7 +9,7 @@ import useMousePosition from '@/app/useMousePosition';
 
 
 export default function HeroComponent() {
-  const { mousePosition, containerRef } = useMousePosition();
+  const { getTransform, mousePosition, containerRef } = useMousePosition();
 
   return (
     <div ref={containerRef}
@@ -19,8 +19,6 @@ export default function HeroComponent() {
       via-indigo-900 
       to-blue-100 
       ">
-      {/* ThreeJSBackground component (currently commented out) */}
-      {/* <ThreeJSBackground /> */}
 
       {/* Animated particles:unique floating animation, created using TailwindCSS utilClasses CSS keyframes */}
       <div className="absolute inset-0 z-0">
@@ -74,16 +72,15 @@ export default function HeroComponent() {
             <motion.h1
               className="tracking-tighter block md:inline-block"
               style={{
-                transform: `translate(${(mousePosition.x - window.innerWidth / 2) * 0.02}px, ${(mousePosition.y - window.innerHeight / 2) * 0.02}px)`,
+                // transform: `translate(${(mousePosition.x - window.innerWidth / 2) * 0.02}px, ${(mousePosition.y - window.innerHeight / 2) * 0.02}px)`,
+                transform: getTransform(0.02),
               }}
             >
               <svg width="100%" height="100%" className="overflow-visible">
                 <defs>
                   <linearGradient id="textGradient" x1="0" y1="0" x2="100%" y2="0">
-                    <stop offset="0%" stopColor="#FFF000" />
-                    {/* <stop offset="0%" stopColor="#FCD34D" /> */}
-                    <stop offset="100%" stopColor="#F59E0B" />
-                    {/* <stop offset="100%" stopColor="#F59E0B" /> */}
+                    <stop offset="0%" stopColor="#FFF000" /> {/* #FCD34D */}
+                    <stop offset="100%" stopColor="#F59E0B" /> {/* F59E0B */}
                   </linearGradient>
                   <filter id="glow">
                     <feGaussianBlur stdDeviation="4" result="coloredBlur" />
@@ -109,9 +106,11 @@ export default function HeroComponent() {
 
             </motion.h1>
             <motion.h2
-              className={`font-zen-antique text-4xl md:text-6xl text-white `}
+              className="font-zen-antique text-4xl md:text-6xl text-white"
+              // className={`font-zen-antique text-4xl md:text-6xl text-white `}
               style={{
-                transform: `translate(${(mousePosition.x - window.innerWidth / 2) * 0.01}px, ${(mousePosition.y - window.innerHeight / 2) * 0.01}px)`,
+                // transform: `translate(${(mousePosition.x - window.innerWidth / 2) * 0.01}px, ${(mousePosition.y - window.innerHeight / 2) * 0.01}px)`,
+                transform: getTransform(0.01),
               }}
             >
               第３回<br />全国歌のチャンピオン選手権大会
@@ -119,13 +118,8 @@ export default function HeroComponent() {
             </motion.h2>
           </div>
 
-          
         </div>
       </div>
-
-
-      
-      
 
       {/* Add to global CSS???:defines the `float` animation used by the particles.*/}
       <style jsx global>{`

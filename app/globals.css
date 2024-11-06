@@ -54,7 +54,7 @@
   background-size: 200% auto;
   background-clip: text;
   padding-bottom: 8px;
-  font-family: "Zen_Antique";
+  /* font-family: "Zen_Antique"; */
   /* font-family: "Nacelle"; */
   font-weight: 800;
   color: transparent;
@@ -65,3 +65,7 @@
     font-size: 2rem;
   }
 }
+/* 
+.font-zen-antique {
+  font-family: var(--font-zen-antique), sans-serif;
+} */
