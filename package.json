@@ -13,7 +13,6 @@
     "@next/font": "^14.2.15",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
-    "@tinacms/cli": "^1.6.11",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.11",
@@ -23,6 +22,7 @@
     "react-dom": "18.2.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
+    "@tinacms/cli": "^1.6.11",
     "tinacms": "^2.4.0"
   },
   "devDependencies": {
