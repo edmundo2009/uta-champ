@@ -83,7 +83,7 @@ const schema = defineSchema({
 
 export default defineConfig({
   schema,
-  branch: process.env.NEXT_PUBLIC_TINA_BRANCH || "main",
+  branch: process.env.NEXT_PUBLIC_TINA_BRANCH || "master",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
   token: process.env.TINA_TOKEN || "",
   build: {
