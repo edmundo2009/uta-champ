@@ -6,9 +6,10 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 
 type FAQItem = {
+  __typename?: "FaqFaqs";
   question: string;
   answer: string;
-  category: string;
+  category?: string | null;
 };
 
 type CategoryData = {
@@ -17,21 +18,16 @@ type CategoryData = {
 };
 
 type FAQProps = {
-  faqData: FAQItem[];
+  faqData: (FAQItem | null)[];
 };
 
 const FAQ: React.FC<FAQProps> = ({ faqData }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Transform flat FAQ data into categorized structure
-  // const categorizedData: CategoryData[] = useMemo(() => [{
-  //   category: "General",
-  //   items: faqData || []
-  // }], [faqData]);
-
-  // use categories from your markdown
+  // Filter out null values and use categories from your markdown
   const categorizedData: CategoryData[] = useMemo(() => {
-    const groupedByCategory = faqData.reduce((acc, item) => {
+    const validFaqData = faqData.filter((item): item is FAQItem => item !== null);
+    const groupedByCategory = validFaqData.reduce((acc, item) => {
       const category = item.category || "General";
       if (!acc[category]) {
         acc[category] = [];
@@ -63,10 +59,6 @@ const FAQ: React.FC<FAQProps> = ({ faqData }) => {
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-8">
-
-      {/* TODO */}
-      {/* <h1 className="text-3xl font-bold mb-8">よくある質問</h1> */}
-
       {/* Search Bar */}
       <div className="relative">
         <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
