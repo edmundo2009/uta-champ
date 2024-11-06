@@ -4,13 +4,14 @@ import { revalidatePath } from 'next/cache';
 import { cache } from 'react';
 
 export interface FAQ {
+  __typename?: "FaqFaqs";
   question: string;
   answer: string;
-  category?: string;
+  category?: string | null;
 }
 
 export interface FAQResponse {
-  faqs: FAQ[];
+  faqs: (FAQ | null)[];
   categories?: string[];
 }
 
@@ -18,7 +19,7 @@ export interface FAQResponse {
 export const getFaqData = cache(async (options: {
   category?: string;
   limit?: number;
-} = {}) => {
+} = {}): Promise<FAQResponse> => {
   const { category, limit } = options;
 
   try {
@@ -30,7 +31,7 @@ export const getFaqData = cache(async (options: {
 
     // Apply category filter if specified
     if (category) {
-      faqs = faqs.filter(faq => faq.category === category);
+      faqs = faqs.filter(faq => faq?.category === category);
     }
 
     // Apply limit if specified
@@ -39,7 +40,7 @@ export const getFaqData = cache(async (options: {
     }
 
     // Extract unique categories
-    const categories = [...new Set(faqs.map(faq => faq.category).filter(Boolean))];
+    const categories = Array.from(new Set(faqs.map(faq => faq?.category).filter((category): category is string => typeof category === 'string')));
 
     return { faqs, categories };
   } catch (error) {

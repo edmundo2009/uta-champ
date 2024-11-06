@@ -11,7 +11,7 @@ interface UseFAQsOptions {
 }
 
 interface UseFAQsResult {
-  faqs: FAQ[];
+  faqs: (FAQ | null)[];
   categories: string[];
   isLoading: boolean;
   error: Error | null;
