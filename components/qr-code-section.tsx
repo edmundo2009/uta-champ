@@ -1,6 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Twitter, MessageCircle } from "lucide-react"
+import FeaturesImageLine from "@/public/line-qr-code.png";
+import FeaturesImageX from "@/public/x-qr-code.png";
 import Link from "next/link"
+import Image from "next/image";
 
 export default function QRCodeSection() {
   return (
@@ -17,19 +20,25 @@ export default function QRCodeSection() {
         <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
           {/* Twitter (X) QR Code */}
           <Card className="overflow-hidden transition-all hover:shadow-lg">
-            <Link href="#twitter-link" className="block">
+            <Link href="https://x.com/uta_champ/" target="_blank" rel="noopener noreferrer" className="block">
               <CardContent className="p-6">
                 <div className="aspect-square bg-gray-200 mb-4 flex items-center justify-center relative overflow-hidden group">
                   {/* QR Code Placeholder */}
-                  <div className="w-3/4 h-3/4 border-2 border-gray-400 flex items-center justify-center">
-                    <span className="text-gray-500 text-lg">QR Code</span>
+                  <div className="w-4/5 h-4/5 border-2 border-gray-400 flex items-center justify-center">
+                  {/* <div className="w-3/8 h-3/8 border-2 border-gray-400 flex items-center justify-center"> */}
+                    {/* <span className="text-gray-500 text-lg">QR Code</span> */}
+                    <Image
+                      // className="h-50 w-50 "
+                      alt="uta Champ X"
+                      src={FeaturesImageX}
+                    />
                   </div>
                   {/* Glow Effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <Twitter className="w-6 h-6 text-gray-700" />
-                  <span className="font-semibold text-gray-700">Follow us on X</span>
+                  <span className="font-semibold text-gray-700">X で大会情報を確認</span>
                 </div>
               </CardContent>
             </Link>
@@ -37,19 +46,23 @@ export default function QRCodeSection() {
 
           {/* LINE QR Code */}
           <Card className="overflow-hidden transition-all hover:shadow-lg">
-            <Link href="#line-link" className="block">
+            <Link href="https://page.line.me/?accountId=uta_champ" target="_blank" rel="noopener noreferrer"　className="block">
               <CardContent className="p-6">
                 <div className="aspect-square bg-gray-200 mb-4 flex items-center justify-center relative overflow-hidden group">
                   {/* QR Code Placeholder */}
-                  <div className="w-3/4 h-3/4 border-2 border-green-400 flex items-center justify-center">
-                    <span className="text-green-500 text-lg">QR Code</span>
+                  <div className="w-4/5 h-4/5 border-2 border-green-400 flex items-center justify-center">
+                    <Image
+                      // className="h-50 w-50 "
+                      alt="uta Champ Line"
+                      src={FeaturesImageLine}
+                    />
                   </div>
                   {/* Glow Effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <MessageCircle className="w-6 h-6 text-green-600" />
-                  <span className="font-semibold text-green-600">Add us on LINE</span>
+                  <span className="font-semibold text-green-600">LINE で大会情報を受け取る</span>
                 </div>
               </CardContent>
             </Link>
