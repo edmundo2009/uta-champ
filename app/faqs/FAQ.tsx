@@ -8,6 +8,7 @@ import { Search } from "lucide-react";
 type FAQItem = {
   question: string;
   answer: string;
+  category?: string;
 };
 
 type CategoryData = {
