@@ -80,6 +80,14 @@ module.exports = {
         "5xl": ["3.5rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
         "6xl": ["4rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
         "7xl": ["4.5rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
+        "8xl": ["5rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
+        "9xl": ["5.5rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
+        "10xl": ["6rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
+        "11xl": ["6.5rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
+        "12xl": ["7rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
+        "13xl": ["7.5rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
+        "14xl": ["8rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
+        "15xl": ["8.5rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
       },
 
       keyframes: {
