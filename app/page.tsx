@@ -42,7 +42,7 @@ export default async function HomePage() {
       bg-repeat-y
       ">
 
-      <div className="px-6">
+      <div className="">
         <QRCodeSection />
       </div>
 
@@ -53,7 +53,7 @@ export default async function HomePage() {
       
 
       {/* Section よくある質問 */}
-      <div className="pb-6 opacity-0 translate-y-10 transition-all duration-700 ease-out">
+      <div className="pb-2 opacity-0 translate-y-10 transition-all duration-700 ease-out">
         {/* 10 units down / applies transition effects to all changing properties. / slow-to-fast transition */}
         <h1 className="gradient-text font-zen-antique">
           よくある質問

@@ -20,7 +20,7 @@ export default function InquirySection() {
   }
 
   return (
-    <section id="inquiry" className="relative py-16 overflow-hidden">
+    <section id="inquiry" className="relative pb-10 overflow-hidden">
       
       {/* Lined background with fade effect */}
       <div className="absolute inset-0">

@@ -5,12 +5,13 @@ import FeaturesImageX from "@/public/x-qr-code.png";
 import Link from "next/link"
 import Image from "next/image";
 
-export default function QRCodeSection() {
+export default function QRCodeSection() { 
   return (
-    <section className="relative pb-16 overflow-hidden">
+    <section className="relative px-8 pb-8 overflow-hidden">
       {/* Lined background with fade effect */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+        <div className="absolute inset-0 
+        bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-transparent"></div>
       </div>
 
@@ -25,7 +26,6 @@ export default function QRCodeSection() {
                 <div className="aspect-square bg-gray-200 mb-4 flex items-center justify-center relative overflow-hidden group">
                   {/* QR Code Placeholder */}
                   <div className="w-4/5 h-4/5 border-2 border-gray-400 flex items-center justify-center">
-                  {/* <div className="w-3/8 h-3/8 border-2 border-gray-400 flex items-center justify-center"> */}
                     {/* <span className="text-gray-500 text-lg">QR Code</span> */}
                     <Image
                       // className="h-50 w-50 "

@@ -39,24 +39,25 @@ export default function HeroComponent() {
       <div className="pointer-events-none absolute inset-0 z-10"
         style={{
           background: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1), transparent)`,
-        }}
-      />
+        }}>
+      </div>
 
       {/* Main Content */}
-      <div className="relative z-20 flex min-h-screen items-center justify-center px-4 py-12 md:py-0">
+      <div className="relative z-20 flex min-h-screen items-center justify-center px-4 py-20 md:py-0">
+
         {/* for logo and text */}
         {/* consisten gap all row and column */}
         {/* two-column grid 300px: for 1st column 1fr: 2nd column takes up the remaining space */}
-        <div className="grid max-w-7xl md:gap-2 md:grid-cols-[300px_1fr]">
+        <div className="grid max-w-12xl md:gap-2 md:grid-cols-[300px_1fr]">
+        {/* <div className="max-w-12xl"> */}
           
           {/* Logo */}
-          <div className="relative flex items-center justify-center">
-            <div className="relative h-64 w-64 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 p-1">
+          <div className="relative flex items-center justify-center pb-0 md:pb-20">
+            <div className="relative h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 p-1">
               <div className="absolute inset-0 animate-pulse rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 blur-xl" />
               <div className="relative flex h-full w-full items-center justify-center rounded-full bg-black/100">
                 <Image
-                  className="h-50 w-50 rounded-full"
-                  // className="h-64 w-64 rounded-full"
+                  className="h-50 w-50 sm:h-58 sm:w-58  rounded-full"
                   alt="uta Champ Logo"
                   src={FeaturesImage}
                   />
@@ -66,7 +67,10 @@ export default function HeroComponent() {
 
           {/* Text Content */}
           {/* items-start: horizontally (left-aligned) */}
-          <div className="flex flex-col md:items-start justify-center md:space-y-6 ">
+          <div className="flex flex-col md:items-start justify-center 
+          -mt-5 md:mt-0 
+          -space-y-10 sm:space-y-2 md:space-y-6
+          ">
 
             {/* block by default, stacks vertically */}
             <motion.h1
@@ -105,16 +109,32 @@ export default function HeroComponent() {
               </svg>
 
             </motion.h1>
-            <motion.h2
-              className="font-zen-antique text-4xl md:text-6xl text-white"
-              // className={`font-zen-antique text-4xl md:text-6xl text-white `}
-              style={{
-                // transform: `translate(${(mousePosition.x - window.innerWidth / 2) * 0.01}px, ${(mousePosition.y - window.innerHeight / 2) * 0.01}px)`,
-                transform: getTransform(0.01),
-              }}
+            <motion.h2 className="font-zen-antique text-white
+              text-3xl sm:text-5xl md:text-6xl lg:text-7xl
+              "
+              style={{ transform: getTransform(0.01) }}
             >
-              第３回<br />全国歌のチャンピオン選手権大会
-              {/* 第３回<br />全国歌の<br className=" md:hidden" />チャンピオン選手権大会 */}
+            <div className="text-center">
+              {/* 1st Line */}
+              <div>第３回</div>
+
+              {/* 2nd Line with Controlled Breakpoints */}
+                <div className="flex flex-wrap justify-center">
+                {/* lg: Full text without break */}
+                {/* <span className="hidden sm:hidden md:hidden lg:inline">全国歌のチャンピオン選手権大会</span> */}
+
+                {/* First breakpoint (break after "全国歌のチャンピオン") */}
+                <span className="hidden sm:hidden md:hidden lg:hidden">全国歌のチャンピオン</span>
+                <span className="hidden sm:hidden md:hidden lg:hidden">選手権大会</span>
+
+                {/* Second breakpoint (break after each part) */}
+                  <span className="block sm:inline md:inline lg:inline">全国歌の</span>
+                <span className="block sm:inline md:inline lg:inline">チャンピオン</span>
+                <span className="block sm:inline md:inline lg:inline">選手権大会</span>
+              </div>
+
+
+            </div>
             </motion.h2>
           </div>
 
