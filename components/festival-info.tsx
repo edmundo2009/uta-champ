@@ -9,7 +9,7 @@ import { Calendar, MapPin } from 'lucide-react'
 export default function FestivalInfo() {
   useScrollAnimation();
   return (
-    <section className="pt-12 
+    <section className="pt-4 px-4
       bg-gradient-to-b 
       from-blue-100
       to-white-100

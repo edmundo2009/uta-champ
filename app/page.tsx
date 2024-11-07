@@ -27,7 +27,7 @@ export default async function HomePage() {
     <div><HeroComponent /></div>
 
 
-    <div className="px-4">
+    <div>
       <FestivalInfo />
     </div>
 
