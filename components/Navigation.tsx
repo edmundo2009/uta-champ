@@ -36,11 +36,11 @@ export default function Navbar() {
             
             {/* Social Media Icons */}
             <div className="flex items-center space-x-2">
-              <Link href="#" className="text-white hover:text-green-400 transition-colors">
+              <Link href="https://page.line.me/?accountId=uta_champ" className="text-white hover:text-green-400 transition-colors">
                 <SiLine className="w-5 h-5" />
                 <span className="sr-only">Line</span>
               </Link>
-              <Link href="https://x.com/uta_champ/" className="text-white hover:text-blue-400 transition-colors">
+              <Link href="https://www.facebook.com/p/%E5%85%A8%E5%9B%BD%E6%AD%8C%E3%81%AE%E3%83%81%E3%83%A3%E3%83%B3%E3%83%94%E3%82%AA%E3%83%B3%E9%81%B8%E6%89%8B%E6%A8%A9%E5%A4%A7%E4%BC%9A-100088831891711/" className="text-white hover:text-blue-400 transition-colors">
                 <Facebook className="w-5 h-5" />
                 <span className="sr-only">Facebook</span>
               </Link>

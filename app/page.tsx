@@ -24,7 +24,9 @@ export default async function HomePage() {
     </div>
     
 
-    <div><HeroComponent /></div>
+    <div>
+      <HeroComponent />
+    </div>
 
 
     <div>
