@@ -22,19 +22,17 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-950/80 backdrop-blur-md' : 'bg-transparent'
       }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-12 md:h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-white">UTA CHAMP</span>
+            <span className="text-sm font-cinzel text-white">UTA CHAMP</span>
           </Link>
 
           {/* Navigation Items */}
           <div className="flex items-center space-x-4">
-            {/* Sign In Button */}
-            {/* <PulsatingEffect isVisible={globalVisibility?.isVisible || false}> */}
             <Button asChild variant="outline" className="text-black border-white hover:bg-gray-100 hover:text-gray-900">
               <a href="#inquiry">お問い合わせ</a>
-              </Button>
+            </Button>
             
             {/* Social Media Icons */}
             <div className="flex items-center space-x-2">

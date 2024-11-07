@@ -72,10 +72,7 @@ module.exports = {
         lg: ["1.125rem", { lineHeight: "1.5", letterSpacing: "-0.0125em" }],
         xl: ["1.25rem", { lineHeight: "1.5", letterSpacing: "-0.0125em" }],
         "2xl": ["1.5rem", { lineHeight: "1.415", letterSpacing: "-0.0268em" }],
-        "3xl": [
-          "1.75rem",
-          { lineHeight: "1.3571", letterSpacing: "-0.0268em" },
-        ],
+        "3xl": [ "1.75rem", { lineHeight: "1.3571", letterSpacing: "-0.0268em" }, ],
         "4xl": ["2.5rem", { lineHeight: "1.1", letterSpacing: "-0.0268em" }],
         "5xl": ["3.5rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
         "6xl": ["4rem", { lineHeight: "1", letterSpacing: "-0.0268em" }],
