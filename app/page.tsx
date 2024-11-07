@@ -23,10 +23,16 @@ export default async function HomePage() {
       <Navbar />
     </div>
     
-    <section><HeroComponent /></section>
-    <section><FestivalInfo /></section>
 
-    <section className="overflow-hidden pb-20 bg-gradient-to-b 
+    <div><HeroComponent /></div>
+
+
+    <div className="px-4">
+      <FestivalInfo />
+    </div>
+
+
+    <section className="overflow-hidden pt-6 pb-20 bg-gradient-to-b 
       from-transparent 
       via-blue-100 
       via-purple-200 
@@ -36,16 +42,15 @@ export default async function HomePage() {
       bg-repeat-y
       ">
 
-      <div><QRCodeSection /></div>
+      <div className="px-6">
+        <QRCodeSection />
+      </div>
 
 
-
+      <div className="">
         <InquirySection />
-      {/* </div> */}
+      </div>
       
-      
-      {/* <div><InquirySection /></div> */}
-
 
       {/* Section よくある質問 */}
       <div className="pb-6 opacity-0 translate-y-10 transition-all duration-700 ease-out">
