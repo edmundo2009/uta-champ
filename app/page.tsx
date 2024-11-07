@@ -19,47 +19,48 @@ export default async function HomePage() {
   return (
 
     <main className="min-h-screen">
-
+    <div className="">
       <Navbar />
+    </div>
+    
+    <section><HeroComponent /></section>
+    <section><FestivalInfo /></section>
+    
+    {/* QRCode Section */}
+    <section className="overflow-hidden p-6 bg-gradient-to-b 
+      from-transparent 
+      via-blue-100 
+      via-purple-200 
+      via-blue-100 
+      to-transparent 
+      bg-[length:100%_1600px] 
+      bg-repeat-y
+      ">
+
+      <div><QRCodeSection /></div>
+
+
+
+        <InquirySection />
+      {/* </div> */}
       
-      <section><HeroComponent /></section>
-      <section><FestivalInfo /></section>
-
-      <section className="overflow-hidden py-20 bg-gradient-to-b 
-        from-transparent 
-        via-blue-100 
-        via-purple-200 
-        via-blue-100 
-        to-transparent 
-        bg-[length:100%_1600px] 
-        bg-repeat-y
-        ">
-
-        <div><QRCodeSection /></div>
+      
+      {/* <div><InquirySection /></div> */}
 
 
+      {/* Section よくある質問 */}
+      <div className="pb-6 opacity-0 translate-y-10 transition-all duration-700 ease-out">
+        {/* 10 units down / applies transition effects to all changing properties. / slow-to-fast transition */}
+        <h1 className="gradient-text font-zen-antique">
+          よくある質問
+        </h1>
+      </div>
 
-          <InquirySection />
-        {/* </div> */}
-        
-        
-        {/* <div><InquirySection /></div> */}
-
-
-        {/* Section よくある質問 */}
-        <div className="pb-6 opacity-0 translate-y-10 transition-all duration-700 ease-out">
-          {/* 10 units down / applies transition effects to all changing properties. / slow-to-fast transition */}
-          <h1 className="gradient-text font-zen-antique">
-            よくある質問
-          </h1>
-        </div>
-
-        {/* FAQ data from tinacms */}
-        <FAQ faqData={faqs} />
-      </section>
+      {/* FAQ data from tinacms */}
+      <FAQ faqData={faqs} />
+    </section>
 
 
-      {/* </GlobalVisibilityContext.Provider> */}
     <div className="hidden md:block">
       <Footer />
     </div>
