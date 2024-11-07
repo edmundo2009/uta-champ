@@ -60,8 +60,9 @@ export default async function HomePage() {
 
 
       {/* </GlobalVisibilityContext.Provider> */}
-
+    <div className="hidden md:block">
       <Footer />
+    </div>
     </main>
   );
 }
